@@ -1,0 +1,22 @@
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:cached
+      - ./wordpress:/var/www/html:delegated
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: wp
+      MYSQL_USER: wp_user
+      MYSQL_PASSWORD: 357@0#P*d%Yh
+      MYSQL_ROOT_PASSWORD: L738nO!i#kA^
+  php:
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    volumes:
+      - ./wordpress:/var/www/html:delegated
+  
