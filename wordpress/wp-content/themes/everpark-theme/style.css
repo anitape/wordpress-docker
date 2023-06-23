@@ -21,14 +21,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
     --green-theme: #2AE2A2;
     --blue-theme: #0055AF;
     --background-lilac: #FAF5FC;
+    --video-width-lg: 939px;
 }
 
 body {
     font-family: 'Work Sans', sans-serif;
 }
 
-.pb-32 {
-    padding-bottom: 32px;
+.z1 {
+    z-index: 1;
+}
+
+.flex1 {
+    flex: 1;
 }
 
 .main-btn {
@@ -65,6 +70,12 @@ body {
 .second-btn:hover {
     background-color: var(--primary-color);
     color: white;
+}
+
+@media(max-width: 576px) {
+    .main-btn, .second-btn {
+        padding: 16px;
+    }
 }
 
 /* HEADER */
@@ -125,11 +136,12 @@ body {
 /* Hero Element */
 
 .hero-container {
-    height: 800px;
+    position: relative;
+    height: 880px;
 }
 
 .hero-columns {
-    gap: 93px;
+    gap: 70px;
 }
 
 .hero-header {
@@ -151,23 +163,122 @@ body {
 .second-btn:hover .watch-video-icon {
     fill: white;
 }
+
+.hero-main-polygon-group {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    z-index: -1;
+}
+
+.hero-polygon-group {
+    position: absolute;
+    left: 0;
+    bottom: 2%;
+    z-index: -1;
+}
+
+@media(max-width: 1770px) {
+    .hero-main-polygon-group {
+        width: 50%;
+    }
+}
+
+@media(max-width: 1400px) {
+    .hero-header {
+        font-size: 70px;
+    }
+}
+
+@media(max-width: 992px) {
+    .hero-container {
+        height: 700px;
+    }
+    .hero-header {
+        font-size: 55px;
+    }
+}
+
 /* Video Element */
 
 .video-container {
+    position: relative;
     height: 960px;
     background-color: var(--green-theme);
 }
 
+.video-polygon-group {
+    position: absolute;
+    top: 3%;
+    max-width: 100%;
+}
+
+@media(max-width: 1400px) {
+    .video-play {
+        width: calc(939px / 1.1);
+        height: calc(626px / 1.1);
+    }
+
+    .video-container {
+        height: calc(960px / 1.2);
+    }
+}
+
+@media(max-width: 1200px) {
+    .video-play {
+        width: calc(939px / 1.3);
+        height: calc(626px / 1.3);
+    }
+
+    .video-container {
+        height: calc(960px / 1.3);
+    }
+}
+
+@media(max-width: 992px) {
+    .video-play {
+        width: calc(939px / 1.6);
+        height: calc(626px / 1.6);
+    }
+
+    .video-container {
+        height: calc(960px / 1.5);
+    }
+}
+
+@media(max-width: 768px) {
+    .video-play {
+        width: calc(939px / 1.8);
+        height: calc(626px / 1.8);
+    }
+
+    .video-container {
+        height: calc(960px / 2);
+    }
+}
+
+@media(max-width: 576px) {
+    .video-play {
+        width: calc(939px / 2.7);
+        height: calc(626px / 2.7);
+    }
+
+    .video-container {
+        height: calc(960px / 2.7);
+    }
+}
+
+
 /* News Element*/
 
 .news-container {
+    position: relative;
     background-color: var(--background-lilac);
     padding-top: 88px;
     padding-bottom: 178px;
 }
 
 .news-row {
-    gap: 32px;
     justify-content: center;
     margin: 0 20px;
 }
@@ -178,31 +289,17 @@ body {
     border-radius: 4px;
 }
 
-/* .news-image {
-    height: 264px;
-    object-fit: cover;
-} */
-
 .news-content {
     flex: 1 1 auto;
     padding: 40px;
 }
 
-.flex-class {
-    flex: 1;
-}
-
 .news-header-wrapper {
-    height: 12vh;
-
+    min-height: 107px;
 }
 
 .news-text {
     margin-bottom: 40px;
-}
-
-.news-button {
-    flex: 1;
 }
 
 .news-single-link {
@@ -217,4 +314,36 @@ body {
 .news-single-link:hover {
     color: var(--primary-color);
     text-decoration: underline;
+}
+
+.news-polygon-group1 {
+    position: absolute;
+    top: 3%;
+    left: 0%;
+}
+
+.news-polygon-group2 {
+    position: absolute;
+    right: 0%;
+    bottom: 15%;
+}
+
+@media(max-width: 992px) {
+    .news-header-wrapper {
+        min-height: auto;
+    }
+
+    .news-row {
+        margin: 0;
+    }
+
+    .news-content {
+        padding: 40px 30px;
+    }
+}
+
+@media(max-width: 768px) {
+    .hero-polygon-group, .news-polygon-group1, .news-polygon-group2 {
+        width: 13%;
+    }
 }

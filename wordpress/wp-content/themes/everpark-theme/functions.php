@@ -24,9 +24,9 @@ function add_styles(){
 
     wp_enqueue_style(
         'bootstrap',
-        'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css',
         [],
-        '5.0.1'
+        '5.3.0'
     );
 
     wp_enqueue_style(
@@ -34,6 +34,13 @@ function add_styles(){
         get_template_directory_uri() . '/style.css',
         [],
         '0.1.0'
+    );
+
+    wp_enqueue_script(
+        'bootstrap-js',
+        'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js',
+        [],
+        '5.3.0'
     );
 }
 
