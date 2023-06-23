@@ -24,6 +24,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
     --video-width-lg: 939px;
 }
 
+/* General Elements */
+
 body {
     font-family: 'Work Sans', sans-serif;
 }
@@ -90,7 +92,7 @@ body {
     font-weight: 500;
     color: var(--primary-color);
     text-decoration: none;
-    padding: 0 16px;
+    padding: 0 12px;
 }
 
 .menu-item a:hover {
@@ -109,6 +111,7 @@ body {
     font-size: 16px;
     font-weight: 500;
     color: var(--primary-color);
+    padding-left: 32px;
 }
 
 .local-link {  
@@ -123,6 +126,25 @@ body {
     text-decoration: underline;
 }
 
+.main-headline {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.mobile-menu-button {
+    width: 72px;
+    height: 72px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 50%;    
+}
+
+.mobile-menu-logo {
+    width: 100px;
+}
+
 @media(max-width: 1570px) {
     .header-links-all {
         gap: 25px;
@@ -130,6 +152,27 @@ body {
 
     .menu-item a {
         padding: 0 10px;
+    }
+}
+
+@media(max-width: 1400px) {
+    .header-buttons {
+        margin-top: 16px;
+    }
+}
+
+@media(max-width: 992px) {
+    .desktop-container {
+        display: none !important;
+    }
+    .nav {
+        margin-bottom: 32px;
+    }
+    .nav .menu-item {
+        padding: 8px 0;
+    }
+    .menu-item a {
+        padding:0;
     }
 }
 

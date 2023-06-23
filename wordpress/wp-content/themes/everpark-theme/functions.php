@@ -36,12 +36,19 @@ function add_styles(){
         '0.1.0'
     );
 
+    wp_enqueue_style(
+        'font-awesome',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+        [],
+        '4.7.0'
+    );
+
     wp_enqueue_script(
         'bootstrap-js',
         'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js',
         [],
         '5.3.0'
-    );
+    );    
 }
 
 add_action('wp_enqueue_scripts', 'add_styles');

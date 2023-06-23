@@ -4,7 +4,7 @@
     <div class="container h-100">
         <div class="row hero-columns h-100 d-flex flex-nowrap align-items-center">
             <div class="col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-5">
-                <h1 class="hero-header">Welcome to Hyperland</h1>
+                <h2 class="hero-header">Welcome to Hyperland</h2>
                 <p class="hero-text">EverPark is spreading its wings all over the country. Now there are already 13 EverParks in Finland.</p>
                 <div class="d-flex flex-row gap-3">
                     <button class="main-btn">Nearest park</button>
